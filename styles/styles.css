@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Serif:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;600;800&display=swap");
+body {
+  background-color: #ffcaed;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 250px;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container-center {
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container-center .header-top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container-center .header-top .header-title {
+  font-size: 6.25rem;
+  font-family: "Roboto Serif", sans-serif;
+  text-transform: uppercase;
+  color: #861742;
+}
+
+header .container-center .header-top .header-slogan {
+  font-size: 2.1875rem;
+  font-family: "Roboto Serif", sans-serif;
+  color: #861742;
+  font-weight: 400;
+}
+
+header .container-center .header-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container-center .header-bottom .box-price, header .container-center .header-bottom .award-box {
+  width: 50%;
+  padding: 0 100px;
+}
+
+header .container-center .header-bottom .box-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+}
+
+header .container-center .header-bottom .box-price::after {
+  content: '';
+  width: 3px;
+  height: 100%;
+  background-color: #ba6688;
+  position: absolute;
+  right: 0;
+}
+
+header .container-center .header-bottom .price, header .container-center .header-bottom .award {
+  color: #861742;
+  margin-right: 10px;
+}
+
+header .container-center .header-bottom .award-value, header .container-center .header-bottom .price-value {
+  color: #66ba6d;
+}
+
+header .container-center .header-bottom .price, header .container-center .header-bottom .price-value, header .container-center .header-bottom .award, header .container-center .header-bottom .award-value {
+  font-size: 1.5625rem;
+  font-family: "Mukta", sans-serif;
+}
+
+main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .container-names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1550px;
+  border: 1px solid #ba6688;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .container-names .name-box {
+  border: 1px solid #ba6688;
+  width: 155px;
+  height: 155px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f8e6f2;
+  cursor: pointer;
+}
+
+main .container-names .name-box:hover {
+  background-color: #f8e6f2BF;
+}
+
+main .container-names .name-box .name {
+  font-size: 1.875rem;
+  font-family: "Mukta", sans-serif;
+  margin-bottom: 30px;
+  color: #861742;
+  font-weight: 700;
+}
+
+main .container-names .name-box .buyer {
+  font-size: 1.375rem;
+  height: 22px;
+  font-family: "Mukta", sans-serif;
+  color: #861742;
+  font-weight: 300;
+}
+
+footer {
+  width: 100%;
+  height: 350px;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid chartreuse;
+}
+
+footer .container-center {
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container-center .logo-networks-wrapper {
+  border: 1px solid darkgrey;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+}
+
+footer .container-center .logo-networks-wrapper .logo-footer {
+  width: 250px;
+}
+
+footer .container-center .logo-networks-wrapper .logo-footer img {
+  width: 250px;
+}
+
+footer .container-center .logo-networks-wrapper .networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .container-center .logo-networks-wrapper .networks .insta {
+  width: 57px;
+}
+
+footer .container-center .logo-networks-wrapper .networks .insta svg * {
+  fill: #861742;
+}
+
+footer .container-center .logo-networks-wrapper .networks .facebook {
+  width: 37px;
+}
+
+footer .container-center .logo-networks-wrapper .networks .facebook svg * {
+  fill: #861742;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,175 @@
+@import 'variables.scss';
+@import 'mixins-functions.scss';
+
+body{
+    background-color: $medioPurple;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: 250px;
+    padding: 50px;
+    display: flex;
+
+    .container-center{
+        @include containerCenter;
+        
+        .header-top{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .header-title{
+                @include titles;
+            }
+            .header-slogan{
+                @include subTitles;
+            }
+        }
+    
+        .header-bottom{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            .box-price, .award-box{
+                width: 50%;
+                padding: 0 100px;
+            }
+
+            .box-price{
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                &::after{
+                    content: '';
+                    width: 3px;
+                    height: 100%;
+                    background-color: $purple;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            
+            .price, .award{
+                    color: $darkhenPurple;
+                    margin-right: 10px;
+            }
+
+            .award-value, .price-value{
+                color: $ligthenGreen;
+            }
+           
+            .price, .price-value, .award, .award-value{
+                font-size: calculadora-rem(25);
+                font-family: $mukta;
+            }
+        }
+    }
+}
+
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container-names{
+        display: flex;
+        flex-wrap: wrap;
+        width: 1550px;
+        border: 1px solid $purple;
+        justify-content: center;
+
+        .name-box{
+            border: 1px solid $purple;
+            width: 155px;
+            height: 155px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $ligthenPurple;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #f8e6f2BF;
+            }
+
+            .name{
+                font-size: calculadora-rem(30);
+                font-family: $mukta;
+                margin-bottom: 30px;
+                color: $darkhenPurple;
+                font-weight: 700;
+            }
+
+            .buyer{
+                font-size: calculadora-rem(22);
+                height: 22px;
+                font-family: $mukta;
+                color: $darkhenPurple;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    height: 350px;
+    padding: 50px;
+    display: flex;
+    border: 1px solid chartreuse;
+
+    .container-center{
+        @include containerCenter;
+
+        .logo-networks-wrapper{
+            border: 1px solid darkgrey;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 50%;
+
+            .logo-footer{
+                width: 250px;
+                img{
+                    width: 250px;
+                }
+            }
+
+            .networks{
+                display: flex;
+                width: 250px;
+                justify-content: space-around;
+                .insta{
+                    width: 57px;
+                    svg{
+                        *{
+                            fill: $darkhenPurple;
+                        }
+                    }
+                    
+                }
+
+                .facebook{
+                    width: 37px;
+
+                    svg{
+                        *{
+                            fill: $darkhenPurple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@mixin flexColumn($alignItems: center, $justifyContent: center, $flexDirection: column) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
+}
+
+@mixin flex($alignItems: center, $justifyContent: center) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin titles {
+    font-size: calculadora-rem(100);
+    font-family: $robotoSerif;
+    text-transform: uppercase;
+    color: $darkhenPurple;
+}
+
+@mixin subTitles {
+    font-size: calculadora-rem(35);
+    font-family: $robotoSerif;
+    color: $darkhenPurple;
+    font-weight: 400;
+}
+
+@mixin containerCenter {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@function calculadora-rem($size){
+    $tamanho: $size/16;
+    @return $tamanho + rem;
+}

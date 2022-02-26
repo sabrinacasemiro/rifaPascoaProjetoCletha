@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "mixins-functions.scss"
+    ],
+    "names": [],
+    "file": "mixins-functions.css"
+}

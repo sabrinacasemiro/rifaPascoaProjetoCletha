@@ -10,10 +10,23 @@ body {
 header {
   width: 100%;
   height: 250px;
-  padding: 50px;
+  padding: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header::after {
+  content: '';
+  height: 5px;
+  width: 1700px;
+  background-color: #ffb1e4;
+  position: absolute;
+  bottom: 0;
 }
 
 header .container-center {
@@ -60,6 +73,31 @@ header .container-center .header-top .header-slogan {
   font-family: "Roboto Serif", sans-serif;
   color: #861742;
   font-weight: 400;
+}
+
+header .container-center .group-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container-center .group-wrapper .group-circle {
+  background-color: #fff;
+  margin: 0 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+}
+
+header .container-center .group-wrapper .group-title {
+  color: #ba6688;
+  font-size: 1.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Roboto Serif", sans-serif;
 }
 
 header .container-center .header-bottom {
@@ -121,6 +159,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 50px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -159,7 +198,7 @@ main .container-names .name-box {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f8e6f2;
+  background-color: #fff;
   cursor: pointer;
 }
 
@@ -173,24 +212,76 @@ main .container-names .name-box .name {
   margin-bottom: 30px;
   color: #861742;
   font-weight: 700;
+  cursor: pointer;
 }
 
-main .container-names .name-box .buyer {
-  font-size: 1.375rem;
-  height: 22px;
-  font-family: "Mukta", sans-serif;
-  color: #861742;
-  font-weight: 300;
-}
-
-footer {
-  width: 100%;
-  height: 350px;
-  padding: 50px;
+main .container-names .name-box .input-box {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid chartreuse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70%;
+}
+
+main .container-names .name-box .input-box::after {
+  content: '';
+  height: 1px;
+  background-color: #ba6688;
+  width: 0px;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+main .container-names .name-box .input-box:focus-within::after {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+main .container-names .name-box .buyer {
+  font-size: 1.125rem;
+  min-height: 22px;
+  font-family: "Mukta", sans-serif;
+  color: #861742;
+  font-weight: 300;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  padding-bottom: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+footer {
+  margin-top: 50px;
+  width: 100%;
+  height: 350px;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+footer::after {
+  content: '';
+  height: 5px;
+  width: 1700px;
+  background-color: #ffb1e4;
+  position: absolute;
+  top: 0;
 }
 
 footer .container-center {
@@ -209,10 +300,15 @@ footer .container-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  width: 1552px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 footer .container-center .logo-networks-wrapper {
-  border: 1px solid darkgrey;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,11 +320,7 @@ footer .container-center .logo-networks-wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 50%;
-}
-
-footer .container-center .logo-networks-wrapper .logo-footer {
-  width: 250px;
+  width: 20%;
 }
 
 footer .container-center .logo-networks-wrapper .logo-footer img {
@@ -258,5 +350,103 @@ footer .container-center .logo-networks-wrapper .networks .facebook {
 
 footer .container-center .logo-networks-wrapper .networks .facebook svg * {
   fill: #861742;
+}
+
+footer .container-center .info-cletha-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container-center .info-cletha-wrapper .whastpp-info {
+  width: 45%;
+}
+
+footer .container-center .info-cletha-wrapper .whastpp-info .info-text, footer .container-center .info-cletha-wrapper .whastpp-info .info-name {
+  font-family: "Mukta", sans-serif;
+  font-size: 1.375rem;
+  color: #ba6688;
+}
+
+footer .container-center .info-cletha-wrapper .whastpp-info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+}
+
+footer .container-center .info-cletha-wrapper .whastpp-info div .info-number {
+  font-family: "Roboto Serif", sans-serif;
+  color: #178633;
+  font-size: 1.4375rem;
+  margin: 0 10px;
+  text-decoration: none;
+  position: relative;
+}
+
+footer .container-center .info-cletha-wrapper .whastpp-info div .info-number::after {
+  content: '';
+  height: 1px;
+  width: 0px;
+  background-color: #178633;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container-center .info-cletha-wrapper .whastpp-info div .info-number:hover::after {
+  width: 100%;
+  position: absolute;
+  left: 2px;
+}
+
+footer .container-center .info-cletha-wrapper .whastpp-info svg {
+  width: 25px;
+}
+
+footer .container-center .info-cletha-wrapper .whastpp-info svg * {
+  fill: #861742;
+}
+
+footer .container-center .info-cletha-wrapper .value-wrapper {
+  width: 45%;
+}
+
+footer .container-center .info-cletha-wrapper .value-wrapper .award-date-wrapper, footer .container-center .info-cletha-wrapper .value-wrapper .price-info, footer .container-center .info-cletha-wrapper .value-wrapper .award-value-info {
+  margin-bottom: 10px;
+}
+
+footer .container-center .info-cletha-wrapper .value-wrapper .date-info, footer .container-center .info-cletha-wrapper .value-wrapper .price-text, footer .container-center .info-cletha-wrapper .value-wrapper .award-text {
+  font-size: 1.5625rem;
+  font-family: "Mukta", sans-serif;
+  color: #861742;
+}
+
+footer .container-center .info-cletha-wrapper .value-wrapper .date-award, footer .container-center .info-cletha-wrapper .value-wrapper .price-value, footer .container-center .info-cletha-wrapper .value-wrapper .award-value {
+  font-size: 1.5625rem;
+  color: #178633;
+}
+
+footer .container-center .info-cletha-wrapper .value-wrapper svg {
+  width: 20px;
+}
+
+footer .container-center .info-cletha-wrapper .value-wrapper svg * {
+  fill: #ba6688;
 }
 /*# sourceMappingURL=styles.css.map */

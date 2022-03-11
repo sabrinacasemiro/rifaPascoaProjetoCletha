@@ -214,7 +214,7 @@ main{
             justify-content: center;
             align-items: center;
             background-color: $white;
-            cursor: pointer;
+            // cursor: pointer;
 
             @media (max-width: 768px) {
                 width: 122px;
@@ -230,83 +230,71 @@ main{
             &:hover{
                 background-color: #f8e6f2BF;
             }
+        }
+        .name{
+            font-size: calculadora-rem(30);
+            font-family: $mukta;
+            margin-bottom: 25px;
+            color: $darkhenPurple;
+            font-weight: 700;
 
-            .name{
-                font-size: calculadora-rem(30);
-                font-family: $mukta;
-                margin-bottom: 30px;
-                color: $darkhenPurple;
-                font-weight: 700;
-                cursor: pointer;
-
-                @media (max-width: 768px) {
+            @media (max-width: 768px) {
                 font-size: calculadora-rem(25); 
-                }
+            }
 
-                @media (max-width: 480px) {
+            @media (max-width: 480px) {
                     font-size: calculadora-rem(15); 
                     margin-bottom: 5px;
-                }
-            }
-
-            .input-box{
-                position: relative;
-                display: flex;
-                justify-content: center;
-                width: 70%;
-
-                @media (max-width: 480px) {
-                    width: 95%; 
-                }
-                &::after{
-                    content: '';
-                    height: 1px;
-                    background-color: $purple;
-                    width: 0px;
-                    transition-duration: 500ms;
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                }
-
-                &:focus-within{
-                    &::after{
-                        width: 100%;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                    }    
-                }
-
-                
-            }
-            .buyer{
-                font-size: calculadora-rem(18);
-                min-height: 22px;
-                font-family: $mukta;
-                color: $darkhenPurple;
-                font-weight: 300;
-                width: 100%;
-                border: none;
-                background-color: transparent;
-                text-align: center;
-                padding-bottom: 4px;
-                box-sizing: border-box;
-                outline: none;
-
-                @media (max-width: 768px) {
-                    font-size: calculadora-rem(15);
-                    font-weight: 400;
-                }
-
-                @media (max-width: 480px) {
-                    font-size: calculadora-rem(11); 
-                    font-weight: 500;
-                }
             }
         }
+
+        .button-buy{
+            background-color: #fff;
+            border: 1px solid $darkhenPurple;
+            box-shadow: 2px 5px 15px -2px rgba(0,0,0,0.52);
+            min-height: 30px;
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            color: $darkhenPurple;
+            font-weight: 600;
+            font-family: $mukta;
+               
+            &:hover, &:focus {
+                box-shadow: 0 4px 6px 0 $darkhenPurple;
+                transform: translateY(-4px);
+            }      
+        }
+        .buyer{
+            font-size: calculadora-rem(18);
+            min-height: 22px;
+            font-family: $robotoSerif;
+            color: $darkhenPurple;
+            font-weight: 300;
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            text-align: center;
+            padding-bottom: 4px;
+            box-sizing: border-box;
+            outline: none;
+            font-weight: 500;
+
+            @media (max-width: 768px) {
+                font-size: calculadora-rem(15);
+                font-weight: 400;
+            }
+
+            @media (max-width: 480px) {
+                font-size: calculadora-rem(11); 
+                font-weight: 500;
+            }
+        }
+
+
     }
 }
+
 
 footer{
     margin-top: 50px;
@@ -379,9 +367,7 @@ footer{
                     @media (max-width: 480px) {
                         width: 100%;
                     }
-                }
-
-                
+                }  
             }
 
             .networks{
@@ -402,8 +388,7 @@ footer{
                         *{
                             fill: $darkhenPurple;
                         }
-                    }
-                    
+                    }  
                 }
 
                 .facebook{
@@ -502,38 +487,81 @@ footer{
                     width: 100%;
                 }
                 
-                    .award-date-wrapper, .price-info, .award-value-info{
-                        margin-bottom: 10px;
+                .award-date-wrapper, .price-info, .award-value-info{
+                    margin-bottom: 10px;
                         
+                }
+
+                .date-info, .price-text, .award-text{
+                    font-size: calculadora-rem(25);
+                    font-family: $mukta;
+                    color: $darkhenPurple;
+
+                    @media (max-width: 768px) {
+                        font-size: calculadora-rem(18);
                     }
+                }
 
-                    .date-info, .price-text, .award-text{
-                        font-size: calculadora-rem(25);
-                        font-family: $mukta;
-                        color: $darkhenPurple;
+                .date-award, .price-value, .award-value{
+                    font-size: calculadora-rem(25);
+                    color: $green;
 
-                        @media (max-width: 768px) {
-                            font-size: calculadora-rem(18);
-                        }
+                    @media (max-width: 768px) {
+                        font-size: calculadora-rem(18);
                     }
+                }
 
-                    .date-award, .price-value, .award-value{
-                        font-size: calculadora-rem(25);
-                        color: $green;
-
-                        @media (max-width: 768px) {
-                            font-size: calculadora-rem(18);
-                        }
+                svg{
+                    width: 20px;
+                    *{
+                        fill: $purple;
                     }
-
-                    svg{
-                        width: 20px;
-                        *{
-                            fill: $purple;
-                        }
-                    }
-                
+                }
             }
+        }
+    }
+}
+
+.container-modal{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border: 5px solid antiquewhite;
+    position: fixed;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(3px);
+
+    .modal-buy-name{
+        height: 300px;
+        width: 50%;
+        background-color: #fff;
+        border: 2px solid $darkhenPurple;
+        position: fixed;
+        left: 25%;
+        top: 30%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 10px;
+
+        .modal-title{
+            font-size: calculadora-rem(35);
+            font-weight: 700;
+            color: $darkhenPurple;
+            margin-bottom: 20px;
+        }
+
+        .container-input-button{
+            margin-bottom: 20px;
+        }
+
+        .name-buyer-modal{
+            height: 25px;
+            padding: 5px;
+            box-sizing: border-box;
+
         }
     }
 }
